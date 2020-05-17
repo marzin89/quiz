@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <script>
+
+    function askQuestion() {
+
+        const min = 0;
+        
+        const max = 10;
+
+        let result = Math.random() * (max - min) + min;
+
+        switch (true) {
+
+            case result >= 0 && result < 1:
+            
+            let question1 = prompt('What is the largest carnivore on land?', ' ');
+
+            break;
+
+            case result >= 1 && result < 2:
+            
+            let question2 = prompt('What is the second highest mountain in the world?', ' ');
+
+            break;
+
+            case result >= 2 && result < 3:
+            
+            let question3 = prompt('How long is a period in ice hockey?', ' ');
+
+            break;
+
+            case result >= 3 && result < 4: 
+            
+            let question4 = prompt('Which famous French existentialist writer was awarded the Nobel Prize in Literature in 1964 and refused it?', ' ');
+
+            break;
+
+            case result >= 4 && result < 5:
+            
+            let question5 = prompt('Which war was fought mainly in central Europe between 1618 and 1648?', ' ');
+
+            break;
+
+            case result >= 5 && result < 6:
+            
+            let question6 = prompt('What is the name of Charles Darwin\'s famous book published in 1859?', ' ');
+
+            break;
+
+            case result >= 6 && result < 7: 
+            
+            let question7 = prompt('What Indonesian island shares its name with one of the biggest programming languages?', ' ');
+
+            break;
+
+            case result >= 7 && result < 8: 
+            
+            let question8 = prompt('What color is the card shown by a referee during a football/soccer game when sending a player off?', ' ');
+
+            break;
+
+            case result >= 8 && result < 9: 
+            
+            let question9 = prompt('Which famous museum would you visit if you wanted to see the equally famous painting Mona Lisa?', ' ');
+
+            break;
+
+            case result >= 9 && result < 10: 
+            
+            let question10 = prompt('What year did Martin Luther publish his 95 theses?', ' ');
+            
+        }
+
+    }
+    </script>
+</html>

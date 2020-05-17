@@ -1,1 +1,1 @@
-# quiz
+This is a simple Javascript quiz that is played from the console. There are currently ten questions from five categories (science/nature, geography, sports, arts/literature and history), the categories are roughly the same as in Trivial Pursuit. It is a single player game, but this is likely going to change eventually. There will be more questions too. # quiz
