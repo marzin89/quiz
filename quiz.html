@@ -2,73 +2,121 @@
 <html>
     <script>
 
-    function askQuestion() {
+    let questions = ['What is the largest carnivore on land?', 'What is the second highest mountain in the world?', 'How long is a period in ice hockey?',
 
-        const min = 0;
+        'Which famous French existentialist writer was awarded the Nobel Prize in Literature in 1964 and refused it?', 'Which war was fought mainly in central Europe between 1618 and 1648?',
+
+        'Which war was fought mainly in central Europe between 1618 and 1648?', 'What is the name of Charles Darwin\'s famous book published in 1859?',
+
+        'What Indonesian island shares its name with one of the biggest programming languages?', 'What color is the card shown by a referee during a football/soccer game when sending a player off?',
+
+        'Which famous museum would you visit if you wanted to see the equally famous painting Mona Lisa?', 'What year did Martin Luther publish his 95 theses?'];
+
+    let random = Math.random();
+
+    let totalQuestions = questions.length;
+
+    let randomIndex = Math.floor(random * totalQuestions);
+
+    let randomQuestion = questions[randomIndex];
         
-        const max = 10;
+    function playRound() {
 
-        let result = Math.random() * (max - min) + min;
+        let answer = prompt(randomQuestion);
 
         switch (true) {
 
-            case result >= 0 && result < 1:
-            
-            let question1 = prompt('What is the largest carnivore on land?', ' ');
+            case question[0] && answer.toLowerCase() == 'Polar Bear'.toLowerCase(): alert('Correct!');
 
             break;
 
-            case result >= 1 && result < 2:
-            
-            let question2 = prompt('What is the second highest mountain in the world?', ' ');
+            case question[0] && answer.toLowerCase() == !'Polar Bear'.toLowerCase(): alert('Wrong!');
 
             break;
 
-            case result >= 2 && result < 3:
-            
-            let question3 = prompt('How long is a period in ice hockey?', ' ');
+            case question[1] && answer.toLowerCase() == 'K2'.toLowerCase(): alert('Correct!');
 
             break;
 
-            case result >= 3 && result < 4: 
-            
-            let question4 = prompt('Which famous French existentialist writer was awarded the Nobel Prize in Literature in 1964 and refused it?', ' ');
+            case question[1] && answer.toLowerCase() == !'K2'.toLowerCase(): alert('Wrong!');
 
             break;
 
-            case result >= 4 && result < 5:
-            
-            let question5 = prompt('Which war was fought mainly in central Europe between 1618 and 1648?', ' ');
+            case question[2] && answer.toLowerCase() == '20 Minutes'.toLowerCase() || answer.toLowerCase() == 'Twenty Minutes'.toLowerCase(): alert('Correct!');
 
             break;
 
-            case result >= 5 && result < 6:
-            
-            let question6 = prompt('What is the name of Charles Darwin\'s famous book published in 1859?', ' ');
+            case question[2] && answer.toLowerCase() == !'20 Minutes'.toLowerCase() || answer.toLowerCase() == !'Twenty Minutes'.toLowerCase(): alert('Wrong!');
 
             break;
 
-            case result >= 6 && result < 7: 
-            
-            let question7 = prompt('What Indonesian island shares its name with one of the biggest programming languages?', ' ');
+            case question[3] && answer.toLowerCase() == 'Jean-Paul Sartre'.toLowerCase() || answer.toLowerCase() == 'Jean Paul Sartre'.toLowerCase() || answer.toLowerCase() == 
+                
+                    'Sartre'.toLowerCase(): alert('Correct!');
 
             break;
 
-            case result >= 7 && result < 8: 
-            
-            let question8 = prompt('What color is the card shown by a referee during a football/soccer game when sending a player off?', ' ');
+            case question[3] && answer.toLowerCase() == !'Jean-Paul Sartre'.toLowerCase() || answer.toLowerCase() == !'Jean Paul Sartre'.toLowerCase() ||answer.toLowerCase() == 
+                
+                    !'Sartre'.toLowerCase(): alert('Wrong!');
 
             break;
 
-            case result >= 8 && result < 9: 
-            
-            let question9 = prompt('Which famous museum would you visit if you wanted to see the equally famous painting Mona Lisa?', ' ');
+            case question[4] && answer.toLowerCase() == '30 Years War'.toLowerCase() || answer.toLowerCase() == '30 Years\' War'.toLowerCase() || answer.toLowerCase() == 
+                
+                    'Thirty Years War'.toLowerCase() || answer.toLowerCase() == 'Thirty Years\' War'.toLowerCase(): alert('Correct!');
 
             break;
 
-            case result >= 9 && result < 10: 
-            
-            let question10 = prompt('What year did Martin Luther publish his 95 theses?', ' ');
+            case question[4] && answer.toLowerCase() == !'30 Years War'.toLowerCase() || answer.toLowerCase() == !'30 Years\' War'.toLowerCase() || answer.toLowerCase() == 
+                
+                    !'Thirty Years War'.toLowerCase() || answer.toLowerCase() == !'Thirty Years\' War'.toLowerCase(): alert('Wrong!');
+
+            break;
+
+            case question[5] && answer.toLowerCase() == 'On The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 'The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 
+                
+                    'Origin Of Species'.toLowerCase(): alert('Correct!');
+
+            break;
+
+            case question[5] && answer.toLowerCase() == !'On The Origin Of Species'.toLowerCase() || answer.toLowerCase() == !'The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 
+                
+                !'Origin Of Species'.toLowerCase(): alert('Wrong!');
+
+            break;
+
+            case question[6] && answer.toLowerCase() == 'Java'.toLowerCase(): alert('Correct!');
+                
+            break;
+                
+            case question[6] && answer.toLowerCase() == !'Java'.toLowerCase(): alert('Wrong!');
+
+            break;
+
+            case question[7] && answer.toLowerCase() == 'Red'.toLowerCase(): alert('Correct!');
+                
+            break;
+                
+            case question[7] && answer.toLowerCase() == !'Red'.toLowerCase(): alert('Wrong!');
+
+            break;
+
+            case question[8] && answer.toLowerCase() == 'The Louvre'.toLowerCase() || answer.toLowerCase() == 'Louvre'.toLowerCase(): alert('Correct!');
+                
+            break;
+                
+            case question[8] && answer.toLowerCase() == !'The Louvre'.toLowerCase() || answer.toLowerCase() == !'Louvre'.toLowerCase(): alert('Wrong!');
+
+            break;
+
+            case question[9] && answer.toLowerCase() == '1517': alert('Correct!'); 
+                
+            break;
+                
+            case question[9] && answer.toLowerCase() == !'1517': alert('Wrong!');
+
+            break;
             
         }
 
