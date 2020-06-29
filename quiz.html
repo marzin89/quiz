@@ -1,125 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <script>
-
-    let questions = ['What is the largest carnivore on land?', 'What is the second highest mountain in the world?', 'How long is a period in ice hockey?',
-
-        'Which famous French existentialist writer was awarded the Nobel Prize in Literature in 1964 and refused it?', 'Which war was fought mainly in central Europe between 1618 and 1648?',
-
-        'Which war was fought mainly in central Europe between 1618 and 1648?', 'What is the name of Charles Darwin\'s famous book published in 1859?',
-
-        'What Indonesian island shares its name with one of the biggest programming languages?', 'What color is the card shown by a referee during a football/soccer game when sending a player off?',
-
-        'Which famous museum would you visit if you wanted to see the equally famous painting Mona Lisa?', 'What year did Martin Luther publish his 95 theses?'];
-
-    let random = Math.random();
-
-    let totalQuestions = questions.length;
-
-    let randomIndex = Math.floor(random * totalQuestions);
-
-    let randomQuestion = questions[randomIndex];
-        
-    function playRound() {
-
-        let answer = prompt(randomQuestion);
-
-        switch (true) {
-
-            case question[0] && answer.toLowerCase() == 'Polar Bear'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[0] && answer.toLowerCase() == !'Polar Bear'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[1] && answer.toLowerCase() == 'K2'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[1] && answer.toLowerCase() == !'K2'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[2] && answer.toLowerCase() == '20 Minutes'.toLowerCase() || answer.toLowerCase() == 'Twenty Minutes'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[2] && answer.toLowerCase() == !'20 Minutes'.toLowerCase() || answer.toLowerCase() == !'Twenty Minutes'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[3] && answer.toLowerCase() == 'Jean-Paul Sartre'.toLowerCase() || answer.toLowerCase() == 'Jean Paul Sartre'.toLowerCase() || answer.toLowerCase() == 
-                
-                    'Sartre'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[3] && answer.toLowerCase() == !'Jean-Paul Sartre'.toLowerCase() || answer.toLowerCase() == !'Jean Paul Sartre'.toLowerCase() ||answer.toLowerCase() == 
-                
-                    !'Sartre'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[4] && answer.toLowerCase() == '30 Years War'.toLowerCase() || answer.toLowerCase() == '30 Years\' War'.toLowerCase() || answer.toLowerCase() == 
-                
-                    'Thirty Years War'.toLowerCase() || answer.toLowerCase() == 'Thirty Years\' War'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[4] && answer.toLowerCase() == !'30 Years War'.toLowerCase() || answer.toLowerCase() == !'30 Years\' War'.toLowerCase() || answer.toLowerCase() == 
-                
-                    !'Thirty Years War'.toLowerCase() || answer.toLowerCase() == !'Thirty Years\' War'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[5] && answer.toLowerCase() == 'On The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 'The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 
-                
-                    'Origin Of Species'.toLowerCase(): alert('Correct!');
-
-            break;
-
-            case question[5] && answer.toLowerCase() == !'On The Origin Of Species'.toLowerCase() || answer.toLowerCase() == !'The Origin Of Species'.toLowerCase() || answer.toLowerCase() == 
-                
-                !'Origin Of Species'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[6] && answer.toLowerCase() == 'Java'.toLowerCase(): alert('Correct!');
-                
-            break;
-                
-            case question[6] && answer.toLowerCase() == !'Java'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[7] && answer.toLowerCase() == 'Red'.toLowerCase(): alert('Correct!');
-                
-            break;
-                
-            case question[7] && answer.toLowerCase() == !'Red'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[8] && answer.toLowerCase() == 'The Louvre'.toLowerCase() || answer.toLowerCase() == 'Louvre'.toLowerCase(): alert('Correct!');
-                
-            break;
-                
-            case question[8] && answer.toLowerCase() == !'The Louvre'.toLowerCase() || answer.toLowerCase() == !'Louvre'.toLowerCase(): alert('Wrong!');
-
-            break;
-
-            case question[9] && answer.toLowerCase() == '1517': alert('Correct!'); 
-                
-            break;
-                
-            case question[9] && answer.toLowerCase() == !'1517': alert('Wrong!');
-
-            break;
-            
-        }
-
-    }
-    </script>
+    <meta charset="utf-8">
+    <head>
+        <link rel="stylesheet" href="quiz.css">
+    </head>
+<body>
+    <div id="quiz">
+        <h1>Quiz</h1>
+        <h2>Select category</h2>
+        <div>
+            <input id="nature" type="radio" name="categories" 
+            value="Nature">
+            <label for="categories">Nature</label>
+        </div>
+        <div>
+            <input id="geography" type="radio" name="categories" 
+            value="geography">
+            <label for="categories">Geography</label>
+        </div>
+        <div>
+            <input id="sports" type="radio" name="categories" value="Sports">
+            <label for="categories">Sports</label>
+        </div>
+        <div>
+            <input id="culture" type="radio" name="categories" value="History">
+            <label for="categories">History</label>
+        </div>
+        <div>
+            <input id="science" type="radio" name="categories" value="Science">
+            <label for="categories">Science</label>
+        </div>
+        <div>
+            <input id="all-categories" type="radio" name="categories" 
+            value="All categories" checked>
+            <label for="categories">All categories</label>
+        </div>
+        <h2>Select difficulty level</h2>
+        <div>
+            <input id="easy" type="radio" name="easy" value="Easy" checked>
+            <label for="easy">Easy</label>
+        </div>
+        <div>
+            <input id="moderate" type="radio" name="moderate" value="Moderate">
+            <label for="moderate">Moderate</label>
+        </div>
+        <div>
+            <input id="hard" type="radio" name="hard" value="hard">
+            <label for="hard">Hard</label>
+        </div>
+            <input id="play" type="button" value="Play">
+        </div>
+    </div>
+</body>
 </html>
