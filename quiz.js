@@ -1,24 +1,24 @@
-let questions = ['What is the largest carnivore on land?', 'What is the second' +
+let questions = ['What is the largest carnivore on land?', 'What is the second ' +
 
     'highest mountain in\nthe world?', 'How long is a period in ice hockey?',
 
-    'Which famous French existentialist writer\nwas awarded the Nobel Prize' + 
+    'Which famous French writer\nwas awarded the Nobel Prize ' + 
     
-    'in\nLiterature in 1964 and refused it?', 'Which war was fought mainly' +
+    'in\nLiterature in 1964 and refused it?', 'Which war was fought mainly ' +
     
-    'in\ncentral Europe between 1618 and 1648?', 'What is the name of Charles' +
+    'in\ncentral Europe between 1618 and 1648?', 'What is the name of Charles ' +
     
-    'Darwin\'s\nfamous book published in 1859?', 'What Indonesian island shares' + 
+    'Darwin\'s\nfamous book published in 1859?', 'What Indonesian island shares ' + 
     
-    'its name\with one of the biggest programming languages?', 'What color is' +
+    'its name\nwith a programming language?', 'What color is ' +
     
     'the card shown by a\nreferee during a football/soccer game\nwhen sending a' + 
     
-    'player off?', 'Which famous museum would you visit if\nyou wanted to see' +
+    ' player off?', 'Which museum would you visit if\nyou wanted to see ' +
     
-    'the equally famous\npainting Mona Lisa?', 'What year did Martin Luther' +
+    'the famous\npainting Mona Lisa?', 'What year did Martin Luther' +
     
-    'publish\nhis 95 theses?'];
+    ' publish\nhis 95 theses?'];
 
         
 const nature = document.getElementById('nature-and-science');
@@ -155,6 +155,8 @@ function nextQuestionEasyMixed() {
         document.getElementById('label-answer4').innerHTML = 'The Louvre (Paris)';
     
     } else if ( question.innerHTML == questions[8] ) {
+
+        question.innerHTML = questions[9];
 
         document.getElementById('label-answer1').innerHTML = '1492';
 
