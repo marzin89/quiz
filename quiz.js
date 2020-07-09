@@ -1,24 +1,22 @@
-let questions = ['What is the largest carnivore on land?', 'What is the second ' +
+let questions = ['What is the largest carnivore on land?', 'What is the second\
+    \
+    highest mountain <br> in the world?', 'How long is a period in ice hockey?',
 
-    'highest mountain in\nthe world?', 'How long is a period in ice hockey?',
-
-    'Which famous French writer\nwas awarded the Nobel Prize ' + 
-    
-    'in\nLiterature in 1964 and refused it?', 'Which war was fought mainly ' +
-    
-    'in\ncentral Europe between 1618 and 1648?', 'What is the name of Charles ' +
-    
-    'Darwin\'s\nfamous book published in 1859?', 'What Indonesian island shares ' + 
-    
-    'its name\nwith a programming language?', 'What color is ' +
-    
-    'the card shown by a\nreferee during a football/soccer game\nwhen sending a' + 
-    
-    ' player off?', 'Which museum would you visit if\nyou wanted to see ' +
-    
-    'the famous\npainting Mona Lisa?', 'What year did Martin Luther' +
-    
-    ' publish\nhis 95 theses?'];
+    'Which famous French writer <br> was awarded the Nobel Prize in <br> Literature\
+    \
+    in 1964 and refused it?', 'Which war was fought mainly in <br> central Europe\
+    \
+    between 1618 and 1648?', 'What is the name of Charles Darwin\'s <br> famous\
+    \
+    book published in 1859?', 'What Indonesian island shares its name <br> with a\
+    \
+    programming language?', 'What color is the card shown by a <br> referee during\
+    \
+    a football/soccer game <br> when sending a player off?', 'Which museum would\
+    \
+    you visit if <br> you wanted to see the famous <br> painting Mona Lisa?', 'What\
+    \
+    year did Martin Luther publish <br> his 95 theses?'];
 
         
 const nature = document.getElementById('nature-and-science');
