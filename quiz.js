@@ -45,14 +45,135 @@ function openNewTab() {
     }
 }
 
-function submitAnswerEasyMixed() {
+const answer1 = document.getElementById('answer1');
 
+const answer2 = document.getElementById('answer2');
 
-}
+const answer3 = document.getElementById('answer3');
+
+const answer4 = document.getElementById('answer4');
+
+const submit = document.getElementById('submit');
+
+const nextQuestion = document.getElementById('next-question');
 
 const question = document.getElementById('question');
 
+function submitAnswerEasyMixed() {
+
+    const result = document.getElementById('result');
+
+    let score = 0;
+
+    if ( question.innerHTML == questions[0] && 
+    
+    answer3.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[1] &&
+    
+    answer4.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[2] &&
+    
+    answer1.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[3] &&
+    
+    answer2.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[4] && answer4.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[5] && answer2.checked ) {
+
+        result.innerHTML = 'Correct!'; 
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[6] && answer1.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[7] && answer3.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[8] && answer4.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( question.innerHTML == questions[9] && answer2.checked ) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        return score;
+
+    } else if ( answer1.checked == false && answer2.checked == false &&
+        
+    answer3.checked == false && answer4.checked == false ) {
+
+        result.innerHTML = '';
+    
+    } else {
+
+        result.innerHTML = 'Wrong!';  
+    }
+}
+
 function nextQuestionEasyMixed() {
+
+    answer1.checked = false;
+
+    answer2.checked = false;
+
+    answer3.checked = false;
+
+    answer4.checked = false;
 
     if ( question.innerHTML == questions[0]) {
 
@@ -165,3 +286,4 @@ function nextQuestionEasyMixed() {
         document.getElementById('label-answer4').innerHTML = '1648';
     }
 }
+
