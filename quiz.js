@@ -59,11 +59,11 @@ const nextQuestion = document.getElementById('next-question');
 
 const question = document.getElementById('question');
 
+let score = 0;
+
 function submitAnswerEasyMixed() {
 
     const result = document.getElementById('result');
-
-    let score = 0;
 
     if ( question.innerHTML == questions[0] && 
     
@@ -151,7 +151,7 @@ function submitAnswerEasyMixed() {
 
         score += 1;
 
-        return score;
+        alert( 'Your score is ' + score + ' /10.' );
 
     } else if ( answer1.checked == false && answer2.checked == false &&
         
@@ -161,7 +161,12 @@ function submitAnswerEasyMixed() {
     
     } else {
 
-        result.innerHTML = 'Wrong!';  
+        result.innerHTML = 'Wrong!';
+        
+        if ( question.innerHTML == questions[9] ) {
+
+            alert( 'Your score is ' + score + ' /10.' );
+        }
     }
 }
 
