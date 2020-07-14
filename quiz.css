@@ -29,3 +29,15 @@ h2, #question {
     border-color: green;
     color: black;
 }
+#next-question:disabled {
+    font-size: medium;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    background-color: green;
+    border-color: green;
+    color: black;
+    opacity: 0.6;
+}
