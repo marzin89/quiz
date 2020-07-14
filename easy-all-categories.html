@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+    <link rel="stylesheet" href="quiz.css">
+    </head>
+<body>
+    <div id="question-area">
+        <p id="question">What is the largest carnivore on land?</p>
+        <div>
+            <input id="answer1" type="radio" name="answer">
+            <label id="label-answer1" for="answer">Kodiak bear</label>
+        </div>
+        <div>
+            <input id="answer2" type="radio" name="answer">
+            <label id="label-answer2" for="answer">African lion</label>
+        </div>
+        <div>
+            <input id="answer3" type="radio" name="answer">
+            <label id="label-answer3" for="answer">Polar bear</label>
+        </div>
+        <div>
+            <input id="answer4" type="radio" name="answer">
+            <label id="label-answer4" for="answer">Siberian tiger</label>
+        </div>
+        <div id="button">
+            <button id="submit" onclick="submitAnswerEasyMixed();
+            enableDisableNextQuestion();">Submit</button>
+            <button id="next-question" onclick="nextQuestionEasyMixed();
+            submitAnswerEasyMixed(); enableDisableNextQuestion();" disabled>
+            Next question</button>
+        </div>
+        <p id="result"></p>
+        <p id="final-score"></p>
+    </div>
+    <script src="easy-all-categories.js"></script>
+</body>
+</html>
