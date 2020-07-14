@@ -29,7 +29,7 @@ h2, #question {
     border-color: green;
     color: black;
 }
-#next-question:disabled {
+#next-question:disabled, #submit:disabled {
     font-size: medium;
     padding-top: 10px;
     padding-bottom: 10px;
