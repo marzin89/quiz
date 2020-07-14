@@ -24,10 +24,11 @@
             <label id="label-answer4" for="answer">Siberian tiger</label>
         </div>
         <div id="button">
-            <button id="submit" onclick="submitAnswerEasyMixed();">
-            Submit</button>
+            <button id="submit" onclick="submitAnswerEasyMixed();
+            enableDisableNextQuestion();">Submit</button>
             <button id="next-question" onclick="nextQuestionEasyMixed();
-            submitAnswerEasyMixed();">Next question</button>
+            submitAnswerEasyMixed(); enableDisableNextQuestion();" disabled>
+            Next question</button>
         </div>
         <p id="result"></p>
         <p id="final-score"></p>
