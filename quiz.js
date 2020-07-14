@@ -18,7 +18,7 @@ let questions = ['What is the largest carnivore on land?', 'What is the second\
     \
     year did Martin Luther publish <br> his 95 theses?'];
 
-        
+
 const nature = document.getElementById('nature-and-science');
 
 const geography = document.getElementById('geography');
@@ -39,7 +39,7 @@ const hard = document.getElementById('hard');
 
 function openNewTab() {
 
-    if ( allCategories.checked == true && easy.checked == true ) {
+    if (allCategories.checked == true && easy.checked == true) {
 
         open("quiz-easy-all-categories.html");
     }
@@ -53,21 +53,19 @@ const answer3 = document.getElementById('answer3');
 
 const answer4 = document.getElementById('answer4');
 
-const submit = document.getElementById('submit');
-
-const nextQuestion = document.getElementById('next-question');
-
 const question = document.getElementById('question');
 
 let score = 0;
+
+let finalScore = document.getElementById('final-score');
 
 function submitAnswerEasyMixed() {
 
     const result = document.getElementById('result');
 
-    if ( question.innerHTML == questions[0] && 
-    
-    answer3.checked ) {
+    if (question.innerHTML == questions[0] &&
+
+        answer3.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -75,9 +73,9 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[1] &&
-    
-    answer4.checked ) {
+    } else if (question.innerHTML == questions[1] &&
+
+        answer4.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -85,9 +83,9 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[2] &&
-    
-    answer1.checked ) {
+    } else if (question.innerHTML == questions[2] &&
+
+        answer1.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -95,9 +93,9 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[3] &&
-    
-    answer2.checked ) {
+    } else if (question.innerHTML == questions[3] &&
+
+        answer2.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -105,7 +103,7 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[4] && answer4.checked ) {
+    } else if (question.innerHTML == questions[4] && answer4.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -113,15 +111,7 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[5] && answer2.checked ) {
-
-        result.innerHTML = 'Correct!'; 
-
-        score += 1;
-
-        return score;
-
-    } else if ( question.innerHTML == questions[6] && answer1.checked ) {
+    } else if (question.innerHTML == questions[5] && answer2.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -129,7 +119,7 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[7] && answer3.checked ) {
+    } else if (question.innerHTML == questions[6] && answer1.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -137,7 +127,7 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[8] && answer4.checked ) {
+    } else if (question.innerHTML == questions[7] && answer3.checked) {
 
         result.innerHTML = 'Correct!';
 
@@ -145,28 +135,77 @@ function submitAnswerEasyMixed() {
 
         return score;
 
-    } else if ( question.innerHTML == questions[9] && answer2.checked ) {
+    } else if (question.innerHTML == questions[8] && answer4.checked) {
 
         result.innerHTML = 'Correct!';
 
         score += 1;
 
-        alert( 'Your score is ' + score + ' /10.' );
+        return score;
 
-    } else if ( answer1.checked == false && answer2.checked == false &&
-        
-    answer3.checked == false && answer4.checked == false ) {
+    } else if (question.innerHTML == questions[9] && answer2.checked) {
+
+        result.innerHTML = 'Correct!';
+
+        score += 1;
+
+        getFinalScore();
+
+    } else if (answer1.checked == false && answer2.checked == false &&
+
+        answer3.checked == false && answer4.checked == false) {
 
         result.innerHTML = '';
-    
+
     } else {
 
         result.innerHTML = 'Wrong!';
-        
-        if ( question.innerHTML == questions[9] ) {
 
-            alert( 'Your score is ' + score + ' /10.' );
+        if ( question.innerHTML == questions[9] && result.innerHTML == 
+            
+        'Wrong!' ) {
+
+            getFinalScore();
         }
+    }
+}
+
+function getFinalScore() {
+
+    if ( score == 10 ) {
+
+        finalScore.innerHTML = score + '/10. Perfect!';
+
+    } else if ( score == 9 ||
+
+        score == 8 ) {
+
+        finalScore.innerHTML = score + '/10. Great job!';
+
+    } else if ( score == 7 ||
+
+        score == 6 ) {
+
+        finalScore.innerHTML = score + '/10. Not bad!';
+
+    } else if ( score == 5 ||
+ 
+        score == 4) {
+
+        finalScore.innerHTML = score + '/10. You can do better than that.';
+
+    } else if ( score == 3 ||
+
+        score == 2 ) {
+
+        finalScore.innerHTML = score + '/10. Poor.';
+
+    } else if ( score == 1 ||
+
+        score == 0 ) {
+
+        finalScore.innerHTML = score + '/10. Terrible.';
+    
     }
 }
 
@@ -180,7 +219,7 @@ function nextQuestionEasyMixed() {
 
     answer4.checked = false;
 
-    if ( question.innerHTML == questions[0]) {
+    if (question.innerHTML == questions[0]) {
 
         question.innerHTML = questions[1];
 
@@ -192,7 +231,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = 'K2';
 
-    } else if ( question.innerHTML == questions[1] ) {
+    } else if (question.innerHTML == questions[1]) {
 
         question.innerHTML = questions[2];
 
@@ -204,7 +243,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = '30 minutes';
 
-    } else if ( question.innerHTML == questions[2] ) {
+    } else if (question.innerHTML == questions[2]) {
 
         question.innerHTML = questions[3];
 
@@ -216,7 +255,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = 'Victor Hugo';
 
-    } else if ( question.innerHTML == questions[3] ) {
+    } else if (question.innerHTML == questions[3]) {
 
         question.innerHTML = questions[4];
 
@@ -228,7 +267,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = 'Thirty Years\' War';
 
-    } else if ( question.innerHTML == questions[4] ) {
+    } else if (question.innerHTML == questions[4]) {
 
         question.innerHTML = questions[5];
 
@@ -242,7 +281,7 @@ function nextQuestionEasyMixed() {
         \
         of Natural Philosophy';
 
-    } else if ( question.innerHTML == questions[5] ) {
+    } else if (question.innerHTML == questions[5]) {
 
         question.innerHTML = questions[6];
 
@@ -254,7 +293,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = 'Bali';
 
-    } else if ( question.innerHTML == questions[6] ) {
+    } else if (question.innerHTML == questions[6]) {
 
         question.innerHTML = questions[7];
 
@@ -266,7 +305,7 @@ function nextQuestionEasyMixed() {
 
         document.getElementById('label-answer4').innerHTML = 'Orange';
 
-    } else if ( question.innerHTML == questions[7] ) {
+    } else if (question.innerHTML == questions[7]) {
 
         question.innerHTML = questions[8];
 
@@ -277,8 +316,8 @@ function nextQuestionEasyMixed() {
         document.getElementById('label-answer3').innerHTML = 'The Musée d\'Orsay (Paris)';
 
         document.getElementById('label-answer4').innerHTML = 'The Louvre (Paris)';
-    
-    } else if ( question.innerHTML == questions[8] ) {
+
+    } else if (question.innerHTML == questions[8]) {
 
         question.innerHTML = questions[9];
 
