@@ -55,6 +55,24 @@ const answer4 = document.getElementById('answer4');
 
 const question = document.getElementById('question');
 
+const submit = document.getElementById('submit');
+
+function enableDisableSubmit() {
+
+    if ( answer1.checked || answer2.checked || answer3.checked ||
+        
+    answer4.checked ) {
+
+        submit.disabled = true;
+
+    } else if ( answer1.checked == false && answer2.checked == false &&
+                
+    answer3.checked == false && answer4.checked == false ) {
+
+        submit.disabled = false;
+    }
+}
+
 const nextQuestion = document.getElementById('next-question');
 
 function enableDisableNextQuestion() {
